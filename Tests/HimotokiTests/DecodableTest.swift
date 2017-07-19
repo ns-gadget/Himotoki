@@ -43,6 +43,24 @@ class DecodableTest: XCTestCase {
         return JSON
     }()
 
+    static func loadJson() -> Any {
+        let path = Bundle(for: DecodableTest.self).path(forResource: "Rate01", ofType: ".json")!
+        let str = try! NSString(contentsOfFile: path, encoding: String.Encoding.utf8.rawValue)
+
+        if let data = str.data(using: String.Encoding.utf8.rawValue) {
+            return try! JSONSerialization.jsonObject(with: data, options: JSONSerialization.ReadingOptions.mutableContainers)
+        } else  {
+            fatalError()
+        }
+    }
+
+    func testRate() {
+        let JSON = DecodableTest.loadJson() as! [String: Any]
+        let rate = try? Rate.decodeValue(JSON)
+        XCTAssert(rate != nil)
+        XCTAssert(rate?.score == 4.2)
+    }
+
     func testPerson() { // swiftlint:disable:this function_body_length
         var JSON = personJSON
 
@@ -192,6 +210,16 @@ extension DecodableTest {
             ("testDecodeDictionary", testDecodeDictionary),
             ("testDecodeNumbers", testDecodeNumbers),
         ]
+    }
+}
+
+struct Rate: Himotoki.Decodable {
+    let score: Float?
+
+    static func decode(_ e: Extractor) throws -> Rate {
+        return try Rate(
+            score: e <| "score"
+        )
     }
 }
 

@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		45BA66901F1EF4E300E103D0 /* Rate01.json in Resources */ = {isa = PBXBuildFile; fileRef = 45BA668D1F1EF2CD00E103D0 /* Rate01.json */; };
+		45BA66911F1EF4E400E103D0 /* Rate01.json in Resources */ = {isa = PBXBuildFile; fileRef = 45BA668D1F1EF2CD00E103D0 /* Rate01.json */; };
+		45BA66921F1EF4E500E103D0 /* Rate01.json in Resources */ = {isa = PBXBuildFile; fileRef = 45BA668D1F1EF2CD00E103D0 /* Rate01.json */; };
 		CD07B5231C8408A40065883E /* TransformerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC356901C819DE7004F6E47 /* TransformerTest.swift */; };
 		CD07B5241C8408A50065883E /* TransformerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC356901C819DE7004F6E47 /* TransformerTest.swift */; };
 		CD07B5251C8408A60065883E /* TransformerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC356901C819DE7004F6E47 /* TransformerTest.swift */; };
@@ -106,6 +109,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		45BA668D1F1EF2CD00E103D0 /* Rate01.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Rate01.json; sourceTree = "<group>"; };
 		CD181ED81AF4F7C20065963F /* Operators.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Operators.swift; sourceTree = "<group>"; };
 		CD182A0F1C93CB640072E0B5 /* KeyPathTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyPathTest.swift; sourceTree = "<group>"; };
 		CD5E68F81BD766BE00417C84 /* DecodeErrorTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DecodeErrorTest.swift; sourceTree = "<group>"; };
@@ -348,6 +352,7 @@
 				CD7450211BB7FE900092EED3 /* RawRepresentableTest.swift */,
 				CD929A471AF4A2C3002F5C53 /* Supporting Files */,
 				CDC356901C819DE7004F6E47 /* TransformerTest.swift */,
+				45BA668D1F1EF2CD00E103D0 /* Rate01.json */,
 			);
 			name = HimotokiTests;
 			path = Tests/HimotokiTests;
@@ -639,6 +644,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				45BA66911F1EF4E400E103D0 /* Rate01.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -653,6 +659,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				45BA66921F1EF4E500E103D0 /* Rate01.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -667,6 +674,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				45BA66901F1EF4E300E103D0 /* Rate01.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

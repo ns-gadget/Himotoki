@@ -32,7 +32,12 @@ extension Double: Decodable {
 
 extension Float: Decodable {
     public static func decode(_ e: Extractor) throws -> Float {
-        return try castOrFail(e)
+        // Swift 3.2では、Anyから浮動小数点にキャストする場合、Doubleになる。
+        // そのため、Doubleに変換出来ない場合は、Floatにも変換できないので例外を返す。
+        guard let result = e.rawValue as? Double else {
+            throw typeMismatch("\(Float.self)", actual: e.rawValue)
+        }
+        return Float(result)
     }
 }
 
